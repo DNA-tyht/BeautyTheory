@@ -4,7 +4,9 @@
 
 <script>
 export default {
-  name: "Categroy"
+  name: "Category",
+  created() {
+  }
 }
 </script>
 

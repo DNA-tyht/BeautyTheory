@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1937eb23-7596-4b60-89ca-fa97e32073ee" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beautytheory/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beautytheory/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/components/common/tabBar/TabBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/components/common/tabBar/TabBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/components/content/mainTabBar/MainTabBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/components/content/mainTabBar/MainTabBar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beautytheory/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/views/category/Category.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/category/Category.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/views/home/Home.vue" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +25,7 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -62,7 +65,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/beautytheory/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/beautytheory/src/components/common" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -80,21 +83,23 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Work\BeautyTheory\beautytheory\src\components\common" />
+      <recent name="E:\Work\BeautyTheory\beautytheory\src\network" />
       <recent name="E:\Work\BeautyTheory\beautytheory\public" />
       <recent name="E:\Work\BeautyTheory\beautytheory\src\views" />
       <recent name="E:\Work\BeautyTheory\beautytheory\src\assets\img" />
-      <recent name="E:\Work\BeautyTheory\beautytheory\src\components\content\mainTabBar" />
-      <recent name="E:\Work\BeautyTheory\beautytheory\src\components\common" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,7 +118,10 @@
       <workItem from="1627697236137" duration="2685000" />
       <workItem from="1627700017942" duration="2456000" />
       <workItem from="1627702714209" duration="971000" />
-      <workItem from="1627703722453" duration="928000" />
+      <workItem from="1627703722453" duration="1084000" />
+      <workItem from="1627711514986" duration="5472000" />
+      <workItem from="1627717079236" duration="5253000" />
+      <workItem from="1627731964065" duration="5790000" />
     </task>
     <servers />
   </component>
