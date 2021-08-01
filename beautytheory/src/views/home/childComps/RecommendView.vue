@@ -1,10 +1,10 @@
 <template>
   <div class="recommend">
     <div v-for="item in recommends.list" class="recommend-item">
-      <a :href="item.link">
+      <!--<a :href="item.link">-->
         <img :src="item.image" alt=""/>
         <div>{{item.title}}</div>
-      </a>
+      <!--</a>-->
     </div>
   </div>
 </template>
