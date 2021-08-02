@@ -1,13 +1,15 @@
 <template>
   <div id="home">
     <nav-bar class="home-nav"><template v-slot:center>美丽说</template></nav-bar>
-    <scroll class="content" >
+    <scroll class="content" ref="scroll" :probe-type="3" :pull-up-load="true"
+            @scroll="contentScroll" @pullingUp="loadMore">
       <home-swiper :banners="banners"></home-swiper>
       <recommend-view :recommends="recommends"></recommend-view>
       <feature-view></feature-view>
       <tab-control class="tab-control" :titles="['流行', '新款', '精选']" @tabClick="tabClick"></tab-control>
       <goods-list class="goods-list" :goods="goods[currentType].list"></goods-list>
     </scroll>
+    <back-top @click.native="backClick" v-show="isShow"></back-top>
   </div>
 </template>
 
@@ -16,6 +18,7 @@ import NavBar from "@/components/common/navBar/NavBar";
 import TabControl from "@/components/content/tabControl/TabControl";
 import GoodsList from "@/components/content/goods/GoodsList";
 import Scroll from "@/components/common/scroll/Scroll";
+import BackTop from "@/components/content/backTop/BackTop";
 
 import HomeSwiper from "@/views/home/childComps/HomeSwiper";
 import RecommendView from "@/views/home/childComps/RecommendView";
@@ -34,6 +37,7 @@ export default {
     FeatureView,
     TabControl,
     Scroll,
+    BackTop
   },
   data() {
     return {
@@ -45,6 +49,7 @@ export default {
         "sell": {page: 0, list: []}
       },
       currentType: "pop",
+      isShow: false,
     }
   },
   methods: {
@@ -64,6 +69,7 @@ export default {
       getHomeGoods(type, page).then(res => {
         this.goods[type].list.push(...res.data.list); //可变参数
         this.goods[type].page += 1;
+        this.$refs.scroll.finishPullUp();
       })
     },
     /**
@@ -84,6 +90,15 @@ export default {
           this.currentType = "sell";
           break;
       }
+    },
+    backClick() {
+      this.$refs.scroll.scrollTo(0, 0);
+    },
+    contentScroll(position) {
+      this.isShow = (-position.y > 600);
+    },
+    loadMore() {
+      this.getHomeGoods(this.currentType);
     }
   },
   created() {
@@ -108,12 +123,10 @@ export default {
   left: 0;
   right: 0;
   top: 0;
-  z-index: 9;
 }
 
 .tab-control {
   top: 44px;
-  z-index: 9;
 }
 
 .content {
