@@ -6,11 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="1937eb23-7596-4b60-89ca-fa97e32073ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/src/components/content/tabControl/TabControl.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/components/content/tabControl/TabControl.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/src/network/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/network/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/components/content/goods/GoodsListItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/components/content/goods/GoodsListItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/views/category/Category.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/category/Category.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beautytheory/src/views/home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/home/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/src/views/home/childComps/HomeSwiper.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/home/childComps/HomeSwiper.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/src/views/home/childComps/RecommendView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/home/childComps/RecommendView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +77,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="settings.webpack" />
+    <property name="ts.external.directory.path" value="D:\IDEA\IntelliJ IDEA 2020.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -88,13 +90,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,6 +123,7 @@
       <workItem from="1627731964065" duration="5993000" />
       <workItem from="1627786002107" duration="2936000" />
       <workItem from="1627818673412" duration="4816000" />
+      <workItem from="1627871830618" duration="12270000" />
     </task>
     <servers />
   </component>

@@ -51,7 +51,6 @@ export default {
 }
 .goods-info .price {
   color: var(--color-high-text);
-  margin-right: 20px;
 }
 .goods-info .collect {
   position: relative;
