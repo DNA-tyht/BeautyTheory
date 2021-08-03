@@ -1,15 +1,20 @@
 <template>
+
   <div id="home">
     <nav-bar class="home-nav"><template v-slot:center>美丽说</template></nav-bar>
+    <!--  小技巧  -->
+    <tab-control class="tab-control" ref="tabControls" :titles="['流行', '新款', '精选']"
+                 @tabClick="tabClick" v-show="isTabFixed"></tab-control>
     <scroll class="content" ref="scroll" :probe-type="3" :pull-up-load="true"
             @scroll="contentScroll" @pullingUp="loadMore">
-      <home-swiper :banners="banners"></home-swiper>
+      <home-swiper :banners="banners" @swiperImageLoad="swiperImageLoad"></home-swiper>
       <recommend-view :recommends="recommends"></recommend-view>
       <feature-view></feature-view>
-      <tab-control class="tab-control" :titles="['流行', '新款', '精选']" @tabClick="tabClick"></tab-control>
+      <tab-control ref="tabControl" :titles="['流行', '新款', '精选']"
+                   @tabClick="tabClick"></tab-control>
       <goods-list class="goods-list" :goods="goods[currentType].list"></goods-list>
     </scroll>
-    <back-top @click.native="backClick" v-show="isShow"></back-top>
+    <back-top @click.native="backClick" v-show="isShowBackTop"></back-top>
   </div>
 </template>
 
@@ -24,8 +29,7 @@ import HomeSwiper from "@/views/home/childComps/HomeSwiper";
 import RecommendView from "@/views/home/childComps/RecommendView";
 import FeatureView from "@/views/home/childComps/FeatureView";
 
-import {getHomeMultidata} from "@/network/home";
-import {getHomeGoods} from "@/network/home";
+import {getHomeGoods, getHomeMultidata} from "@/network/home";
 
 export default {
   name: "Home",
@@ -49,7 +53,9 @@ export default {
         "sell": {page: 0, list: []}
       },
       currentType: "pop",
-      isShow: false,
+      isShowBackTop: false,
+      isTabFixed: false,
+      tabOffsetTop: 0,
     }
   },
   methods: {
@@ -69,8 +75,23 @@ export default {
       getHomeGoods(type, page).then(res => {
         this.goods[type].list.push(...res.data.list); //可变参数
         this.goods[type].page += 1;
-        this.$refs.scroll.finishPullUp();
+        this.$refs.scroll && this.$refs.scroll.finishPullUp &&this.$refs.scroll.finishPullUp();
       })
+    },
+    /**
+     * @Description 防抖函数
+     * @Return
+     * @Author 脱氧核糖
+     * @Date 2021/8/3 15:00
+     */
+    debounce(func, delay) {
+      let timer = null;
+      return function (...args) {
+        if (timer) clearTimeout(timer)
+          timer = setTimeout(() => {
+            func.apply(this, args);
+          }, delay);
+      }
     },
     /**
     * @Description 事件监听相关的方法
@@ -90,15 +111,24 @@ export default {
           this.currentType = "sell";
           break;
       }
+      this.$refs.scroll.scrollTo(0, -this.tabOffsetTop);
+      this.$refs.tabControl.currentIndex = index;
+      this.$refs.tabControls.currentIndex = index;
     },
     backClick() {
       this.$refs.scroll.scrollTo(0, 0);
     },
     contentScroll(position) {
-      this.isShow = (-position.y > 600);
+      //判断backTop是否显示
+      this.isShowBackTop = (-position.y > 600);
+      //判断tabControl是否吸顶
+      this.isTabFixed = (-position.y > this.tabOffsetTop);
     },
     loadMore() {
       this.getHomeGoods(this.currentType);
+    },
+    swiperImageLoad() {
+      this.tabOffsetTop = this.$refs.tabControl.$el.offsetTop;
     }
   },
   created() {
@@ -106,6 +136,13 @@ export default {
     this.getHomeGoods("pop");
     this.getHomeGoods("new");
     this.getHomeGoods("sell");
+  },
+  mounted() {
+    //图片加载完成事件监听
+    const refresh = this.debounce(this.$refs.scroll.refresh, 200);
+    this.$bus.$on("itemImageLoad", () => {
+      this.$refs.scroll && this.$refs.scroll.refresh && refresh();
+    });
   },
 }
 </script>
@@ -119,14 +156,15 @@ export default {
 .home-nav {
   background-color: var(--color-tint);
   color: var(--color-background);
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
+  /*position: fixed;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*top: 0;*/
 }
 
 .tab-control {
-  top: 44px;
+  position: relative;
+  z-index: 9;
 }
 
 .content {

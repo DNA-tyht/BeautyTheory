@@ -6,8 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="1937eb23-7596-4b60-89ca-fa97e32073ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beautytheory/src/components/common/scroll/Scroll.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/components/common/scroll/Scroll.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/components/content/goods/GoodsListItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/components/content/goods/GoodsListItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beautytheory/src/views/home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/home/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/views/home/childComps/HomeSwiper.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/home/childComps/HomeSwiper.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -122,6 +128,8 @@
       <workItem from="1627871830618" duration="15078000" />
       <workItem from="1627906860819" duration="617000" />
       <workItem from="1627907723017" duration="3782000" />
+      <workItem from="1627954987685" duration="14048000" />
+      <workItem from="1627982015082" duration="678000" />
     </task>
     <servers />
   </component>
@@ -144,6 +152,16 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/beautytheory" />
     </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/beautytheory/src/bus.js</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

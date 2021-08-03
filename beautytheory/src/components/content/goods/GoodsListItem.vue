@@ -1,6 +1,7 @@
 <template>
   <div class="goods-item">
-    <img :src="goodsItem.show.img" alt=""/>
+    <!--  监听图片的加载，解决Scroll的bug  -->
+    <img :src="goodsItem.show.img" alt="" @load="imageLoad"/>
     <div class="goods-info">
       <p>{{goodsItem.title}}</p>
       <span class="price">{{goodsItem.price}}</span> <br>
@@ -18,6 +19,11 @@ export default {
       default() {
         return null;
       }
+    }
+  },
+  methods: {
+    imageLoad() {
+      this.$bus.$emit("itemImageLoad");
     }
   }
 }
