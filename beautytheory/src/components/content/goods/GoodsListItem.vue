@@ -1,5 +1,5 @@
 <template>
-  <div class="goods-item">
+  <div class="goods-item" @click="goodsClick">
     <!--  监听图片的加载，解决Scroll的bug  -->
     <img :src="goodsItem.show.img" alt="" @load="imageLoad"/>
     <div class="goods-info">
@@ -24,6 +24,9 @@ export default {
   methods: {
     imageLoad() {
       this.$bus.$emit("itemImageLoad");
+    },
+    goodsClick() {
+      this.$router.push("/detail/" + this.goodsItem.iid);
     }
   }
 }

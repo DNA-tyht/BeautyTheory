@@ -9,11 +9,10 @@
       <change beforePath="$PROJECT_DIR$/beautytheory/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beautytheory/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beautytheory/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/src/components/common/scroll/Scroll.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/components/common/scroll/Scroll.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/components/common/navBar/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/components/common/navBar/NavBar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beautytheory/src/components/content/goods/GoodsListItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/components/content/goods/GoodsListItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beautytheory/src/views/home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/home/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/src/views/home/childComps/HomeSwiper.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/home/childComps/HomeSwiper.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +23,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -39,6 +38,13 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailGoodsInfo.vue" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/beautytheory/src/views/detail/Detail.vue" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/beautytheory/src/network/detail.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailShopInfo.vue" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailBaseInfo.vue" root0="SKIP_INSPECTION" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -65,7 +71,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/beautytheory/src/components/common" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/beautytheory/src/views/detail/childComps" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -84,11 +90,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Work\BeautyTheory\beautytheory\src\views\detail\childComps" />
       <recent name="E:\Work\BeautyTheory\beautytheory\src\components\common" />
       <recent name="E:\Work\BeautyTheory\beautytheory\src\network" />
       <recent name="E:\Work\BeautyTheory\beautytheory\public" />
       <recent name="E:\Work\BeautyTheory\beautytheory\src\views" />
-      <recent name="E:\Work\BeautyTheory\beautytheory\src\assets\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -129,7 +135,9 @@
       <workItem from="1627906860819" duration="617000" />
       <workItem from="1627907723017" duration="3782000" />
       <workItem from="1627954987685" duration="14048000" />
-      <workItem from="1627982015082" duration="678000" />
+      <workItem from="1627982015082" duration="1728000" />
+      <workItem from="1628132803324" duration="4157000" />
+      <workItem from="1628142403758" duration="8001000" />
     </task>
     <servers />
   </component>
@@ -152,16 +160,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/beautytheory" />
     </ignored-roots>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/beautytheory/src/bus.js</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

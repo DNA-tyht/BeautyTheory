@@ -1,5 +1,4 @@
 <template>
-
   <div id="home">
     <nav-bar class="home-nav"><template v-slot:center>美丽说</template></nav-bar>
     <!--  小技巧  -->
@@ -29,7 +28,8 @@ import HomeSwiper from "@/views/home/childComps/HomeSwiper";
 import RecommendView from "@/views/home/childComps/RecommendView";
 import FeatureView from "@/views/home/childComps/FeatureView";
 
-import {getHomeGoods, getHomeMultidata} from "@/network/home";
+import {getHomeGoods} from "@/network/home";
+import {getHomeMultidata} from "@/network/home";
 
 export default {
   name: "Home",
@@ -156,10 +156,6 @@ export default {
 .home-nav {
   background-color: var(--color-tint);
   color: var(--color-background);
-  /*position: fixed;*/
-  /*left: 0;*/
-  /*right: 0;*/
-  /*top: 0;*/
 }
 
 .tab-control {
