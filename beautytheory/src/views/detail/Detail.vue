@@ -8,6 +8,7 @@
       <detail-shop-info :shop="shop"></detail-shop-info>
       <detail-goods-info :detail-info="detailInfo" @imageLoad="imageLoad"></detail-goods-info>
       <detail-param-info :param-info="paramInfo"></detail-param-info>
+      <detail-common-info :comment-info="commentInfo"></detail-common-info>
     </scroll>
   </div>
 </template>
@@ -21,6 +22,7 @@ import DetailBaseInfo from "@/views/detail/childComps/DetailBaseInfo";
 import DetailShopInfo from "@/views/detail/childComps/DetailShopInfo";
 import DetailGoodsInfo from "@/views/detail/childComps/DetailGoodsInfo";
 import DetailParamInfo from "@/views/detail/childComps/DetailParamInfo";
+import DetailCommonInfo from "@/views/detail/childComps/DetailCommonInfo";
 
 import {getDetail} from "@/network/detail";
 import {Goods} from "@/network/detail";
@@ -37,6 +39,7 @@ export default {
     DetailShopInfo,
     DetailGoodsInfo,
     DetailParamInfo,
+    DetailCommonInfo,
   },
   data() {
     return {
@@ -46,11 +49,12 @@ export default {
       shop: {},
       detailInfo: {},
       paramInfo: {},
+      commentInfo: {},
     }
   },
   methods:{
     imageLoad() {
-      this.$refs.scroll.refresh();
+      this.$refs.scroll && this.$refs.scroll.refresh();
     }
   },
   created: function () {
@@ -59,6 +63,7 @@ export default {
     //根据iid请求数据
     getDetail(this.iid).then(res => {
       const data = res.result;
+      console.log(data);
       //顶部图片
       this.topImages = data.itemInfo.topImages;
       //商品信息
@@ -69,6 +74,8 @@ export default {
       this.detailInfo = data.detailInfo;
       //商品参数信息
       this.paramInfo = new GoodsParam(data.itemParams.info, data.itemParams.rule);
+      //评论信息
+      this.commentInfo = (data.rate.cRate !== 0) ? data.rate.list : 0;
     })
   },
 }

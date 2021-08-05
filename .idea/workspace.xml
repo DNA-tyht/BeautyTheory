@@ -6,12 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1937eb23-7596-4b60-89ca-fa97e32073ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/src/components/common/navBar/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/components/common/navBar/NavBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/src/components/content/goods/GoodsListItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/components/content/goods/GoodsListItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/common/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/common/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/components/common/scroll/Scroll.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/components/common/scroll/Scroll.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/views/detail/Detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/detail/Detail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailBaseInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailBaseInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailGoodsInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailGoodsInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailParamInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailParamInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailShopInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailShopInfo.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beautytheory/src/views/home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/home/Home.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,8 +43,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailGoodsInfo.vue" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/beautytheory/src/views/detail/Detail.vue" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailCommonInfo.vue" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/beautytheory/src/network/detail.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailShopInfo.vue" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailShopInfo.vue" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailBaseInfo.vue" root0="SKIP_INSPECTION" />
   </component>
   <component name="MavenImportPreferences">
@@ -137,7 +139,7 @@
       <workItem from="1627954987685" duration="14048000" />
       <workItem from="1627982015082" duration="1728000" />
       <workItem from="1628132803324" duration="4157000" />
-      <workItem from="1628142403758" duration="8001000" />
+      <workItem from="1628142403758" duration="17133000" />
     </task>
     <servers />
   </component>

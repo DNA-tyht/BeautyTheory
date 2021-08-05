@@ -56,6 +56,7 @@ export default {
       isShowBackTop: false,
       isTabFixed: false,
       tabOffsetTop: 0,
+      saveY: 0,
     }
   },
   methods: {
@@ -136,6 +137,13 @@ export default {
     this.getHomeGoods("pop");
     this.getHomeGoods("new");
     this.getHomeGoods("sell");
+  },
+  activated() {
+    this.$refs.scroll.scrollTo(0, this.saveY);
+    this.$refs.scroll && this.$refs.scroll.refresh();
+  },
+  deactivated() {
+    this.saveY = this.$refs.scroll.getScrollY();
   },
   mounted() {
     //图片加载完成事件监听
