@@ -15,7 +15,7 @@
         <p>{{item.content}}</p>
       </div>
       <div class="info-other">
-        <span class="date">{{item.created | showDate}}</span>
+        <span class="date">{{showDate(item.created)}}</span>
         <span>{{item.style}}</span>
       </div>
       <div class="info-images">

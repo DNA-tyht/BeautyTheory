@@ -9,10 +9,10 @@
     <div class="info-other">
       <span>{{goods.columns[0]}}</span>
       <span>{{goods.columns[1]}}</span>
-      <span>{{goods.services[goods.services.length-1].name}}</span>
+      <span>{{goods.services[goods.services.length - 1].name}}</span>
     </div>
     <div class="info-service">
-      <span class="info-service-item" v-for="index in goods.services.length-1" :key="index">
+      <span class="info-service-item" v-for="index in goods.services.length - 1" :key="index">
         <img :src="goods.services[index-1].icon" alt=""/>
         <span>{{goods.services[index-1].name}}</span>
       </span>

@@ -8,7 +8,7 @@
       <div class="shop-middle-item shop-middle-left">
         <div class="info-sells">
           <div class="sells-count">
-            {{shop.sells | sellCountFilter}}
+            {{sellCountFilter(shop.sells)}}
           </div>
           <div class="sells-text">总销量</div>
         </div>
@@ -46,7 +46,7 @@ export default {
       }
     }
   },
-  filters: {
+  methods: {
     sellCountFilter: function (value) {
       if (value < 10000)
         return value;

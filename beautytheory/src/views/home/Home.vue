@@ -22,7 +22,6 @@ import NavBar from "@/components/common/navBar/NavBar";
 import TabControl from "@/components/content/tabControl/TabControl";
 import GoodsList from "@/components/content/goods/GoodsList";
 import Scroll from "@/components/common/scroll/Scroll";
-import BackTop from "@/components/content/backTop/BackTop";
 
 import HomeSwiper from "@/views/home/childComps/HomeSwiper";
 import RecommendView from "@/views/home/childComps/RecommendView";
@@ -30,6 +29,8 @@ import FeatureView from "@/views/home/childComps/FeatureView";
 
 import {getHomeGoods} from "@/network/home";
 import {getHomeMultidata} from "@/network/home";
+import {itemListenerMixin} from "@/common/mixin";
+import {backTopMixin} from "@/common/mixin";
 
 export default {
   name: "Home",
@@ -41,8 +42,11 @@ export default {
     FeatureView,
     TabControl,
     Scroll,
-    BackTop
   },
+  mixins: [
+    itemListenerMixin,
+    backTopMixin,
+  ],
   data() {
     return {
       banners: [],
@@ -53,7 +57,6 @@ export default {
         "sell": {page: 0, list: []}
       },
       currentType: "pop",
-      isShowBackTop: false,
       isTabFixed: false,
       tabOffsetTop: 0,
       saveY: 0,
@@ -80,21 +83,6 @@ export default {
       })
     },
     /**
-     * @Description 防抖函数
-     * @Return
-     * @Author 脱氧核糖
-     * @Date 2021/8/3 15:00
-     */
-    debounce(func, delay) {
-      let timer = null;
-      return function (...args) {
-        if (timer) clearTimeout(timer)
-          timer = setTimeout(() => {
-            func.apply(this, args);
-          }, delay);
-      }
-    },
-    /**
     * @Description 事件监听相关的方法
     * @Return
     * @Author 脱氧核糖
@@ -116,14 +104,10 @@ export default {
       this.$refs.tabControl.currentIndex = index;
       this.$refs.tabControls.currentIndex = index;
     },
-    backClick() {
-      this.$refs.scroll.scrollTo(0, 0);
-    },
     contentScroll(position) {
-      //判断backTop是否显示
-      this.isShowBackTop = (-position.y > 600);
       //判断tabControl是否吸顶
       this.isTabFixed = (-position.y > this.tabOffsetTop);
+      this.listenShowBackTop(position);
     },
     loadMore() {
       this.getHomeGoods(this.currentType);
@@ -144,13 +128,8 @@ export default {
   },
   deactivated() {
     this.saveY = this.$refs.scroll.getScrollY();
-  },
-  mounted() {
-    //图片加载完成事件监听
-    const refresh = this.debounce(this.$refs.scroll.refresh, 200);
-    this.$bus.$on("itemImageLoad", () => {
-      this.$refs.scroll && this.$refs.scroll.refresh && refresh();
-    });
+    //取消全局时间的监听
+    this.$bus.$off("itemImageLoad", this.itemImgListener);
   },
 }
 </script>

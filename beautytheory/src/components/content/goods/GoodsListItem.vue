@@ -1,7 +1,7 @@
 <template>
   <div class="goods-item" @click="goodsClick">
     <!--  监听图片的加载，解决Scroll的bug  -->
-    <img :src="goodsItem.show.img" alt="" @load="imageLoad"/>
+    <img :src="showImage" alt="" @load="imageLoad"/>
     <div class="goods-info">
       <p>{{goodsItem.title}}</p>
       <span class="price">{{goodsItem.price}}</span> <br>
@@ -19,6 +19,11 @@ export default {
       default() {
         return null;
       }
+    }
+  },
+  computed: {
+    showImage() {
+      return this.goodsItem.image || this.goodsItem.show.img;
     }
   },
   methods: {
