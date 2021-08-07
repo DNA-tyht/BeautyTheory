@@ -5,17 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1937eb23-7596-4b60-89ca-fa97e32073ee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/src/common/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/common/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/src/components/content/goods/GoodsList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/components/content/goods/GoodsList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/src/components/content/goods/GoodsListItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/components/content/goods/GoodsListItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/components/content/mainTabBar/MainTabBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/components/content/mainTabBar/MainTabBar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beautytheory/src/network/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/network/detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/views/cart/Cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/cart/Cart.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/views/category/Category.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/category/Category.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beautytheory/src/views/detail/Detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/detail/Detail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailBaseInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailBaseInfo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailCommonInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailCommentInfo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailNavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailNavBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailShopInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailShopInfo.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beautytheory/src/views/home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/home/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautytheory/src/views/profile/Profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/beautytheory/src/views/profile/Profile.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +48,7 @@
     <setting file="file://$PROJECT_DIR$/beautytheory/src/views/detail/Detail.vue" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailCommentInfo.vue" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/beautytheory/src/network/detail.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/beautytheory/src/views/cart/Cart.vue" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailShopInfo.vue" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/beautytheory/src/views/detail/childComps/DetailBaseInfo.vue" root0="SKIP_INSPECTION" />
   </component>
@@ -62,9 +63,6 @@
   <component name="MavenRunner">
     <option name="jreName" value="1.8" />
     <option name="vmOptions" value="-Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true.archetypeCatalog=internal" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1w2Mzy3vtxsC5qD8eyzcHVNU2Ei" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -105,6 +103,19 @@
       <recent name="E:\Work\BeautyTheory\beautytheory\src\views" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -135,6 +146,7 @@
       <workItem from="1628227759162" duration="13333000" />
       <workItem from="1628249021214" duration="17000" />
       <workItem from="1628249065284" duration="3800000" />
+      <workItem from="1628309270284" duration="18899000" />
     </task>
     <servers />
   </component>

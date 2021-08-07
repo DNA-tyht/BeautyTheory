@@ -73,9 +73,11 @@ export default {
   },
   methods:{
     imageLoad() {
-      const refresh = debounce(this.$refs.scroll.refresh, 200);
-      this.$refs.scroll && this.$refs.scroll.refresh() && refresh();
-      this.getThemeTopY();
+      if (this.$refs.scroll && this.$refs.scroll.refresh()) {
+        const refresh = debounce(this.$refs.scroll.refresh, 200);
+        refresh();
+        this.getThemeTopY();
+      }
     },
     titleClick(index) {
       this.$refs.scroll.scrollTo(0, -this.themeTopY[index], 500);
@@ -96,8 +98,10 @@ export default {
       product.image = this.topImages[0];
       product.title = this.goods.title;
       product.desc = this.goods.desc;
-      product.price = this.goods.newPrice;
+      product.price = this.goods.realPrice;
       product.iid = this.iid;
+      //将商品添加到购物车中
+      this.$store.dispatch("addCart", product);
     },
   },
   created: function () {

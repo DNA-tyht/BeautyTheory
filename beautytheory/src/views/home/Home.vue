@@ -1,5 +1,5 @@
 <template>
-  <div id="home">
+  <div class="home">
     <nav-bar class="home-nav"><template v-slot:center>美丽说</template></nav-bar>
     <!--  小技巧  -->
     <tab-control class="tab-control" ref="tabControls" :titles="['流行', '新款', '精选']"
@@ -111,6 +111,7 @@ export default {
     },
     loadMore() {
       this.getHomeGoods(this.currentType);
+      this.$refs.scroll && this.$refs.scroll.refresh && this.$refs.scroll.refresh();
     },
     swiperImageLoad() {
       this.tabOffsetTop = this.$refs.tabControl.$el.offsetTop;
@@ -135,7 +136,7 @@ export default {
 </script>
 
 <style scoped>
-#home {
+.home {
   height: 100vh;
   position: relative;
 }
