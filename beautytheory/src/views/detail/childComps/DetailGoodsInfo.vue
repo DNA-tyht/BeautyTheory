@@ -9,7 +9,7 @@
     <div v-for="detailItem in detailInfo.detailImage">
       <div class="info-key">{{detailItem.key}}</div>
       <div class="info-list">
-        <img v-for="(item, index) in detailItem.list" :key="index" :src="item" @load="imgLoad" alt="">
+        <img v-for="(item, index) in detailItem.list" :key="index" :src="item" @load="imgLoad" alt=""/>
       </div>
     </div>
   </div>
@@ -26,7 +26,7 @@ export default {
   data() {
     return {
       counter: 0,
-      imagesLength: 0
+      imagesLength: 0,
     }
   },
   methods: {
@@ -40,7 +40,7 @@ export default {
   watch: {
     detailInfo() {
       //获取图片的个数
-      this.imagesLength = this.detailInfo.detailImage[0].list.length
+      this.imagesLength = this.detailInfo.detailImage[0].list.length;
     }
   }
 }

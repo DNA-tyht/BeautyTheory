@@ -13,12 +13,14 @@
     </scroll>
     <detail-bottom-bar @addCart="addCart"></detail-bottom-bar>
     <back-top @click.native="backClick" v-show="isShowBackTop"></back-top>
+    <toast :message="message" :is-show="isShow"></toast>
   </div>
 </template>
 
 <script>
 import Scroll from "@/components/common/scroll/Scroll";
 import GoodsList from "@/components/content/goods/GoodsList";
+import Toast from "@/components/common/toast/Toast";
 
 import DetailNavBar from "@/views/detail/childComps/DetailNavBar";
 import DetailSwiper from "@/views/detail/childComps/DetailSwiper";
@@ -43,6 +45,7 @@ export default {
   components: {
     Scroll,
     GoodsList,
+    Toast,
     DetailNavBar,
     DetailSwiper,
     DetailBaseInfo,
@@ -54,7 +57,7 @@ export default {
   },
   mixins: [
     itemListenerMixin,
-    backTopMixin
+    backTopMixin,
   ],
   data() {
     return {
@@ -69,14 +72,16 @@ export default {
       themeTopY: [],
       getThemeTopY: null,
       currentIndex: 0,
+      message: "",
+      isShow: false,
     }
   },
   methods:{
     imageLoad() {
+      this.getThemeTopY();
       if (this.$refs.scroll && this.$refs.scroll.refresh()) {
         const refresh = debounce(this.$refs.scroll.refresh, 200);
         refresh();
-        this.getThemeTopY();
       }
     },
     titleClick(index) {
@@ -100,8 +105,16 @@ export default {
       product.desc = this.goods.desc;
       product.price = this.goods.realPrice;
       product.iid = this.iid;
+
       //将商品添加到购物车中
-      this.$store.dispatch("addCart", product);
+      this.$store.dispatch("addCart", product).then(res => {
+        this.message = res;
+        this.isShow = true;
+        setTimeout(() => {
+          this.message = "";
+          this.isShow = false;
+        }, 1000);
+      });
     },
   },
   created: function () {
@@ -136,7 +149,7 @@ export default {
       this.themeTopY.push(this.$refs.comment.$el.offsetTop);
       this.themeTopY.push(this.$refs.recommend.$el.offsetTop);
       this.themeTopY.push(Number.MAX_VALUE);
-    });
+    }, 200);
   },
   deactivated() {
     //取消全局事件的监听

@@ -1,4 +1,5 @@
 import {debounce} from "@/common/utils";
+import {POP, NEW, SELL} from "@/common/const";
 import BackTop from "@/components/content/backTop/BackTop";
 
 //混入，多个组件间可的复用代码
@@ -34,6 +35,30 @@ export const backTopMixin = {
     listenShowBackTop(position) {
       //判断backTop是否显示
       this.isShowBackTop = (-position.y > 600);
+    }
+  }
+}
+
+export const tabControlMixin = {
+  data: function () {
+    return {
+      currentType: POP,
+    }
+  },
+  methods: {
+    tabClick(index) {
+      switch (index) {
+        case 0:
+          this.currentType = POP;
+          break
+        case 1:
+          this.currentType = NEW;
+          break
+        case 2:
+          this.currentType = SELL;
+          break
+      }
+      console.log(this.currentType);
     }
   }
 }

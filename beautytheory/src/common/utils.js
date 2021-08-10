@@ -19,6 +19,10 @@ export function formatDate(date, fmt) {
   return fmt;
 }
 
+function padLeftZero(str) {
+  return ("00" + str).substr(str.length);
+}
+
 //防抖函数
 export function debounce(func, delay) {
   let timer = null;
@@ -28,8 +32,4 @@ export function debounce(func, delay) {
       func.apply(this, args);
     }, delay);
   }
-}
-
-function padLeftZero(str) {
-  return ("00" + str).substr(str.length);
 }

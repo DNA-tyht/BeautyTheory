@@ -24,6 +24,10 @@ export default {
   computed: {
     showImage() {
       return this.goodsItem.image || this.goodsItem.show.img;
+    },
+    showIid() {
+      console.log("服务器可能没有抓取商品数据");
+      return this.goodsItem.iid || this.goodsItem.item_id;
     }
   },
   methods: {
@@ -31,7 +35,7 @@ export default {
       this.$bus.$emit("itemImageLoad");
     },
     goodsClick() {
-      this.$router.push("/detail/" + this.goodsItem.iid);
+      this.$router.push("/detail/" + this.showIid);
     }
   }
 }
